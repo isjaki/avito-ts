@@ -6,7 +6,7 @@ class App extends Component {
     render() {
         return (
             <div className={styles.app}>
-                Hello from your React App!
+                Mini Avito App
             </div>
         );
     }
