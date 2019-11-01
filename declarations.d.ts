@@ -8,7 +8,6 @@ declare module '*.scss' {
     export = content;
 }
 
-
 declare module '*.sass' {
     const content: {[className: string]: string};
     export = content;

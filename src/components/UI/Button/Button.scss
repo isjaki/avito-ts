@@ -1,0 +1,43 @@
+.button {
+    font-family: inherit;
+    font-size: 0.95.rem;
+    font-weight: bolder;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #0070c9;
+    color: #fff;
+
+    .pickFavorites {
+        border: 2px solid #0070c9;
+        color: #0070c9;
+        background-color: #fff;
+
+        .active {
+            color: #fff;
+            background-color: #0070c9;
+        }
+    }
+
+    .addToFavorites {
+        color: #c2c2c0;
+        font-size: 1.4rem;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+
+        @media screen and (min-width: 600px) {
+            font-size: 2rem;
+            right: 20px;
+            bottom: 15px;
+        }
+
+        .active {
+            color: #0070c9
+        }
+    }
+}

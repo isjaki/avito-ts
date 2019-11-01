@@ -7,7 +7,7 @@ type Props = {
     onClick: () => void
 };
 
-const Backdrop = ({ isVisible, onClick }: Props) => (
+const Backdrop = ({ isVisible, onClick }: Props): false | JSX.Element => (
     isVisible && <div className={styles.backdrop} onClick={onClick} role="presentation"></div>
 );
 

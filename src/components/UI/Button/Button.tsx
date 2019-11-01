@@ -1,11 +1,11 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 
 import classnames from 'classnames';
 
 import styles from './Button.scss';
 
 type Props = {
-    children: ReactElement,
+    children: string | JSX.Element,
     buttonType: string,
     isActive: boolean,
     onClick: () => void,
@@ -18,7 +18,7 @@ const Button = ({
     isActive,
     onClick,
     tooltip
-}: Props) => {
+}: Props): JSX.Element => {
     const classes = classnames({
         [styles.button]: true,
         [styles.active]: isActive,

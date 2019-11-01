@@ -9,7 +9,7 @@ type Props = {
     onClick: () => void,
 }
 
-const HamburgerButton = ({ isOpened, onClick }: Props) => {
+const HamburgerButton = ({ isOpened, onClick }: Props): JSX.Element => {
     const classes = classnames({
         [styles.hamburgerButton]: true,
         [styles.opened]: isOpened,
