@@ -1,6 +1,8 @@
 import { normalize, schema } from 'normalizr';
 
 import { Action } from '../../typings/global';
+import { Product } from '../../typings/products';
+import { Sellers } from '../../typings/sellers';
 
 import {
     FETCH_PRODUCT_INFO_START,
@@ -19,12 +21,12 @@ export const fetchProductInfoFail = (): Action => ({
     type: FETCH_PRODUCT_INFO_FAIL,
 });
 
-export const fetchProductInfoSuccess = (products): Action => ({
+export const fetchProductInfoSuccess = (products: Product[]): Action => ({
     type: FETCH_PRODUCT_INFO_SUCCESS,
     products,
 });
 
-export const fetchSellersSuccess = (sellers): Action => ({
+export const fetchSellersSuccess = (sellers: Sellers): Action => ({
     type: FETCH_SELLERS_SUCCESS,
     sellers,
 });
