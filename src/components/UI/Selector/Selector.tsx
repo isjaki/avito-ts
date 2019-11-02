@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import styles from './Selector.scss';
+import { Option } from '../../../typings/global';
 
-interface Option {
-    value: string;
-    displayValue: string;
-}
+import styles from './Selector.scss';
 
 type Props = {
     options: readonly Option[];
@@ -16,7 +13,7 @@ type Props = {
 const Selector = ({ options, initialValue, onSelectorChange }: Props): JSX.Element => {
     const [value, setValue] = useState(initialValue);
 
-    const handleSelectorChange = (event): void => {
+    const handleSelectorChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
         setValue(event.target.value);
     }
 

@@ -1,5 +1,7 @@
 import { normalize, schema } from 'normalizr';
 
+import { Action } from '../../typings/global';
+
 import {
     FETCH_PRODUCT_INFO_START,
     FETCH_PRODUCT_INFO_FAIL,
@@ -8,11 +10,6 @@ import {
     SET_FAVORITES_TO_STATE,
     FETCH_PRODUCT_INFO,
 } from '../actionTypes';
-
-interface Action {
-    type: string;
-    [payload: string]: any;
-}
 
 export const fetchProductInfoStart = (): Action => ({
     type: FETCH_PRODUCT_INFO_START,

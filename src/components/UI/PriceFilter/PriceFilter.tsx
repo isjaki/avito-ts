@@ -14,14 +14,14 @@ const PriceFilter = ({ onPriceChange }: Props): JSX.Element => {
         return /^[0-9]*\.?[0-9]*$/.test(input);
     }
 
-    const handlePriceFromChange = (event): void => {
+    const handlePriceFromChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const inputValue: string = event.target.value;
         if (!isNumber(inputValue)) return;
 
         setPriceFrom(inputValue);
     }
 
-    const handlePriceToChange = (event): void => {
+    const handlePriceToChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const inputValue: string = event.target.value;
         if (!isNumber(inputValue)) return;
 
