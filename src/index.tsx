@@ -1,6 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+
+import products from './store/reducers/products';
+import { rootSaga } from './store/sagas/index';
 
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const reducer = combineReducers({
+    products,
+});
+
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(
+    reducer,
+    applyMiddleware(sagaMiddleware)
+);
+
+sagaMiddleware.run(rootSaga);
+
+const app = (
+    <Provider store={store}>
+        <App />
+    </Provider>
+);
+
+ReactDOM.render(app, document.getElementById('root'));
