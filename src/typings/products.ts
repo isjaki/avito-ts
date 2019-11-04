@@ -6,3 +6,7 @@ export interface Product {
     readonly pictures: string[];
     readonly relationships: { seller: string };
 }
+
+export interface FavoriteProductIds {
+    [id: string]: true;
+}
