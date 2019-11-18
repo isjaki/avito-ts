@@ -6,6 +6,7 @@ import createSagaMiddleware from 'redux-saga';
 
 import products from './store/reducers/products';
 import filters from './store/reducers/filters';
+import sorting from './store/reducers/sorting';
 import { rootSaga } from './store/sagas/index';
 
 import App from './App';
@@ -13,6 +14,7 @@ import App from './App';
 const reducer = combineReducers({
     products,
     filters,
+    sorting,
 });
 
 const sagaMiddleware = createSagaMiddleware();

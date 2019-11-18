@@ -25,12 +25,12 @@ const initialState: State = {
     isFavoritesOnly: false,
 };
 
-const updateCategoryFilter = (state: State, action: Action) => ({
+const updateCategoryFilter = (state: State, action: Action): State => ({
     ...state,
     category: action.categoryType,
 });
 
-const updatePriceFilter = (state: State, action: Action) => ({
+const updatePriceFilter = (state: State, action: Action): State => ({
     ...state,
     price: {
         from: action.priceFrom,
@@ -38,7 +38,7 @@ const updatePriceFilter = (state: State, action: Action) => ({
     },
 });
 
-const updateFavoritesOnlyFilter = (state: State) => ({
+const updateFavoritesOnlyFilter = (state: State): State => ({
     ...state,
     isFavoritesOnly: !state.isFavoritesOnly,
 });

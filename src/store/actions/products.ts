@@ -54,4 +54,3 @@ export const removeProductFromFavorites = (productId: string): Action => ({
 export const initializeFavorites = (): Action => ({
     type: INITIALIZE_FAVORITES,
 });
-
