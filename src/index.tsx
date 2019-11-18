@@ -5,12 +5,14 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
 import products from './store/reducers/products';
+import filters from './store/reducers/filters';
 import { rootSaga } from './store/sagas/index';
 
 import App from './App';
 
 const reducer = combineReducers({
     products,
+    filters,
 });
 
 const sagaMiddleware = createSagaMiddleware();

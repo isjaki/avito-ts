@@ -33,7 +33,7 @@ export async function* fetchProductInfoSaga() {
         processStrategy: (value: Seller) => ({
             name: value.name,
             rating: value.rating,
-        })
+        }),
     });
     const sellerListSchema = new schema.Array(sellerSchema);
     const normalizedSellers = normalize(sellers, sellerListSchema);
