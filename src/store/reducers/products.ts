@@ -11,9 +11,9 @@ import {
 } from '../actionTypes';
 
 type State = {
-    products: [] | Product[],
-    sellers: {} | Sellers,
-    favoriteProductIds: {} | FavoriteProductIds,
+    products: Product[],
+    sellers: Sellers,
+    favoriteProductIds: FavoriteProductIds,
     loading: boolean,
     error: boolean,
 };

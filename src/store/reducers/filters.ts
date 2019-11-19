@@ -9,19 +9,15 @@ import {
 
 type State = {
     category: FilterOptionStrings,
-    price: {
-        from: number,
-        to: number,
-    },
+    priceFrom: number,
+    priceTo: number,
     isFavoritesOnly: boolean,
 };
 
 const initialState: State = {
     category: 'All',
-    price: {
-        from: 0,
-        to: Infinity,
-    },
+    priceFrom: 0,
+    priceTo: Infinity,
     isFavoritesOnly: false,
 };
 
@@ -32,10 +28,8 @@ const updateCategoryFilter = (state: State, action: Action): State => ({
 
 const updatePriceFilter = (state: State, action: Action): State => ({
     ...state,
-    price: {
-        from: action.priceFrom,
-        to: action.priceTo,
-    },
+    priceFrom: action.priceFrom,
+    priceTo: action.priceTo,
 });
 
 const updateFavoritesOnlyFilter = (state: State): State => ({
