@@ -23,4 +23,3 @@ const RatingWidget = ({ rating }: Props): JSX.Element => {
 }
 
 export default RatingWidget;
-
