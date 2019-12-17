@@ -1,7 +1,6 @@
 import { put } from 'redux-saga/effects';
 import { normalize, schema } from 'normalizr';
 
-import { Action } from '../../typings/global';
 import { Seller } from '../../typings/sellers';
 
 import {
@@ -9,7 +8,6 @@ import {
     fetchSellersSuccess,
     fetchProductsSuccess,
     fetchProductInfoFail,
-    setFavoritesToState,
 } from '../actions/products';
 
 export async function* fetchProductInfoSaga() {
@@ -40,37 +38,4 @@ export async function* fetchProductInfoSaga() {
 
     yield put(fetchSellersSuccess(normalizedSellers.entities.sellers));
     yield put(fetchProductsSuccess(products));
-}
-
-export function* addProductToFavoritesSaga(action: Action) {
-    let favoriteProductIds = yield localStorage.getItem('favoriteProductIds');
-    if (favoriteProductIds === null) return;
-
-    favoriteProductIds = yield JSON.parse(favoriteProductIds);
-    favoriteProductIds[action.productId] = true;
-    yield localStorage.setItem('favoriteProductIds', JSON.stringify(favoriteProductIds));
-
-    yield put(setFavoritesToState(favoriteProductIds));
-}
-
-export function* removeProductFromFavoritesSaga(action: Action) {
-    let favoriteProductIds = yield localStorage.getItem('favoriteProductIds');
-    if (favoriteProductIds === null) return;
-
-    delete favoriteProductIds[action.productId];
-    yield localStorage.setItem('favoriteProductIds', JSON.stringify(favoriteProductIds));
-
-    yield put(setFavoritesToState(favoriteProductIds));
-}
-
-export function* initializeFavoritesSaga() {
-    let favoriteProductIds = yield localStorage.getItem('favoriteProductIds');
-    if (favoriteProductIds === null) {
-        yield localStorage.setItem('favoriteProductIds', '{}');
-        favoriteProductIds = {};
-    } else {
-        favoriteProductIds = yield JSON.parse(favoriteProductIds);
-    }
-    
-    yield put(setFavoritesToState(favoriteProductIds));
 }

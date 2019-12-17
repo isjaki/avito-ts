@@ -9,14 +9,9 @@ export interface Product {
     readonly relationships: { seller: string };
 };
 
-export interface FavoriteProductIds {
-    [id: string]: true;
-};
-
 export interface ProductState {
     readonly products: Product[];
     readonly sellers: Sellers;
-    readonly favoriteProductIds: FavoriteProductIds;
     readonly loading: boolean;
     readonly error: boolean;
 };
