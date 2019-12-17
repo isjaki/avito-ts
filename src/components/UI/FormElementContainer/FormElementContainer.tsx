@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './FormElementContainer.scss';
 
 type Props = {
-    label: string;
+    label?: string;
     children: string | JSX.Element;
 }
 

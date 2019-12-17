@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-import { Option } from '../../../typings/global';
+import { Action, Option } from '../../../typings/global';
 
 import styles from './Selector.scss';
 
 type Props = {
     options: readonly Option[];
     initialValue: string;
-    onSelectorChange: (value: string) => void;
+    onSelectorChange: (value: any) => Action;
 }
 
 const Selector = ({ options, initialValue, onSelectorChange }: Props): JSX.Element => {

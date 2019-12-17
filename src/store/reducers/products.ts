@@ -1,5 +1,4 @@
-import { Product, FavoriteProductIds } from '../../typings/products';
-import { Sellers } from '../../typings/sellers';
+import { ProductState } from '../../typings/products';
 import { Action } from '../../typings/global';
 
 import {
@@ -10,15 +9,7 @@ import {
     SET_FAVORITES_TO_STATE,
 } from '../actionTypes';
 
-type State = {
-    products: Product[],
-    sellers: Sellers,
-    favoriteProductIds: FavoriteProductIds,
-    loading: boolean,
-    error: boolean,
-};
-
-const initialState: State = {
+const initialState: ProductState = {
     products: [],
     sellers: {},
     favoriteProductIds: {},
@@ -26,35 +17,35 @@ const initialState: State = {
     error: false,
 }
 
-const fetchProductInfoStart = (state: State): State => ({
+const fetchProductInfoStart = (state: ProductState): ProductState => ({
     ...state,
     loading: true,
     error: false,
 });
 
-const fetchProductInfoFail = (state: State): State => ({
+const fetchProductInfoFail = (state: ProductState): ProductState => ({
     ...state,
     loading: false,
     error: true,
 });
 
-const fetchProductsSuccess = (state: State, action: Action): State => ({
+const fetchProductsSuccess = (state: ProductState, action: Action): ProductState => ({
     ...state,
     loading: false,
     products: action.products,
 });
 
-const fetchSellersSuccess = (state: State, action: Action): State => ({
+const fetchSellersSuccess = (state: ProductState, action: Action): ProductState => ({
     ...state,
     sellers: action.sellers,
 });
 
-const setFavoritesToState = (state: State, action: Action): State => ({
+const setFavoritesToState = (state: ProductState, action: Action): ProductState => ({
     ...state,
     favoriteProductIds: action.favoriteProductIds,
 });
 
-const reducer = (state: State = initialState, action: Action): State => {
+const reducer = (state: ProductState = initialState, action: Action): ProductState => {
     switch (action.type) {
         case FETCH_PRODUCT_INFO_START:
             return fetchProductInfoStart(state);

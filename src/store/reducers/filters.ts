@@ -1,5 +1,5 @@
 import { Action } from '../../typings/global';
-import { FilterOptionStrings } from '../../typings/filters';
+import { FilterState } from '../../typings/filters';
 
 import { 
     UPDATE_CATEGORY_FILTER,
@@ -7,37 +7,30 @@ import {
     UPDATE_FAVORITES_ONLY_FILTER,
 } from '../actionTypes';
 
-type State = {
-    category: FilterOptionStrings,
-    priceFrom: number,
-    priceTo: number,
-    isFavoritesOnly: boolean,
-};
-
-const initialState: State = {
+const initialState: FilterState = {
     category: 'All',
     priceFrom: 0,
     priceTo: Infinity,
     isFavoritesOnly: false,
 };
 
-const updateCategoryFilter = (state: State, action: Action): State => ({
+const updateCategoryFilter = (state: FilterState, action: Action): FilterState => ({
     ...state,
     category: action.categoryType,
 });
 
-const updatePriceFilter = (state: State, action: Action): State => ({
+const updatePriceFilter = (state: FilterState, action: Action): FilterState => ({
     ...state,
     priceFrom: action.priceFrom,
     priceTo: action.priceTo,
 });
 
-const updateFavoritesOnlyFilter = (state: State): State => ({
+const updateFavoritesOnlyFilter = (state: FilterState): FilterState => ({
     ...state,
     isFavoritesOnly: !state.isFavoritesOnly,
 });
 
-const reducer = (state: State = initialState, action: Action): State => {
+const reducer = (state: FilterState = initialState, action: Action): FilterState => {
     switch (action.type) {
         case UPDATE_CATEGORY_FILTER:
             return updateCategoryFilter(state, action);

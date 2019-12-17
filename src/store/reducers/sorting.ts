@@ -1,22 +1,18 @@
 import { Action } from '../../typings/global';
-import { SortingOptionStrings } from '../../typings/sorting';
+import { SortingState } from '../../typings/sorting';
 
 import { UPDATE_SORTING_OPTION } from '../actionTypes';
 
-type State = {
-    sortingOption: SortingOptionStrings,
-};
-
-const initialState: State = {
+const initialState: SortingState = {
     sortingOption: 'Default',
 };
 
-const updateSortingOption = (state: State, action: Action): State => ({
+const updateSortingOption = (state: SortingState, action: Action): SortingState => ({
     ...state,
     sortingOption: action.sortingOption,
 });
 
-const reducer = (state: State = initialState, action: Action): State => {
+const reducer = (state: SortingState = initialState, action: Action): SortingState => {
     switch (action.type) {
         case UPDATE_SORTING_OPTION:
             return updateSortingOption(state, action);

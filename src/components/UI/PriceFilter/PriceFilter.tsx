@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 import styles from './PriceFilter.scss';
+import { Action } from '../../../typings/global';
 
 type Props = {
-    onPriceChange: (priceFrom: number, priceTo: number) => void;
+    onPriceChange: (priceFrom: number, priceTo: number) => Action;
 }
 
 const PriceFilter = ({ onPriceChange }: Props): JSX.Element => {

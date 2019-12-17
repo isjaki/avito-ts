@@ -5,11 +5,11 @@ import classnames from 'classnames';
 import styles from './Button.scss';
 
 type Props = {
-    children: string | JSX.Element,
-    buttonType: string,
-    isActive: boolean,
+    buttonType?: string,
+    isActive?: boolean,
     onClick: () => void,
-    tooltip: string
+    children?: string | JSX.Element,
+    tooltip?: string
 }
 
 const Button = ({
