@@ -5,7 +5,7 @@ import { Action, Option } from '../../../typings/global';
 import styles from './Selector.scss';
 
 type Props = {
-    options: readonly Option[];
+    options: readonly Option<string>[];
     initialValue: string;
     onSelectorChange: (value: any) => Action;
 }

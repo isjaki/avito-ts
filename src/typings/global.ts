@@ -12,8 +12,8 @@ export interface Action {
 //     payload: T;
 // }
 
-export interface Option {
-    value: string;
+export interface Option<T> {
+    value: T;
     displayValue: string;
 };
 

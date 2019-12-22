@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { Action, Option, RootState } from '../../typings/global';
 import { FilterOptionStrings, FilterOptions } from '../../typings/filters';
+import { Dispatch } from 'redux';
 
 import { 
     updateCategoryFilter,
@@ -14,7 +15,6 @@ import FormElementContainer from '../../components/UI/FormElementContainer/FormE
 import Selector from '../../components/UI/Selector/Selector';
 import PriceFilter from '../../components/UI/PriceFilter/PriceFilter';
 import Button from '../../components/UI/Button/Button';
-import { Dispatch } from 'redux';
 
 type Props = {
     updateCategory: (categoryType: FilterOptionStrings) => Action,
@@ -23,7 +23,7 @@ type Props = {
     isFavoritesOnly: boolean,
 };
 
-const selectorOptions: Option[] = [
+const selectorOptions: Option<FilterOptionStrings>[] = [
     { value: FilterOptions.All, displayValue: 'Все' },
     { value: FilterOptions.Immovable, displayValue: 'Недвижимость' },
     { value: FilterOptions.Cameras, displayValue: 'Фотоаппараты' },

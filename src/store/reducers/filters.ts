@@ -1,5 +1,5 @@
 import { Action } from '../../typings/global';
-import { FilterState } from '../../typings/filters';
+import { FilterState, FilterOptions } from '../../typings/filters';
 
 import { 
     UPDATE_CATEGORY_FILTER,
@@ -8,7 +8,7 @@ import {
 } from '../actionTypes';
 
 const initialState: FilterState = {
-    category: 'All',
+    category: FilterOptions.All,
     priceFrom: 0,
     priceTo: Infinity,
     isFavoritesOnly: false,
