@@ -1,10 +1,10 @@
 import { Action } from '../../typings/global';
-import { SortingState } from '../../typings/sorting';
+import { SortingState, SortingOptions } from '../../typings/sorting';
 
 import { UPDATE_SORTING_OPTION } from '../actionTypes';
 
 const initialState: SortingState = {
-    sortingOption: 'Default',
+    sortingOption: SortingOptions.Default,
 };
 
 const updateSortingOption = (state: SortingState, action: Action): SortingState => ({
