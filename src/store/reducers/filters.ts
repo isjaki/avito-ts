@@ -3,7 +3,7 @@ import { FilterState } from '../../typings/filters';
 
 import { 
     UPDATE_CATEGORY_FILTER,
-    UPDATE_PRICE_FILTER,
+    SET_PRICE_FILTER_TO_STATE,
     UPDATE_FAVORITES_ONLY_FILTER,
 } from '../actionTypes';
 
@@ -19,7 +19,7 @@ const updateCategoryFilter = (state: FilterState, action: Action): FilterState =
     category: action.categoryType,
 });
 
-const updatePriceFilter = (state: FilterState, action: Action): FilterState => ({
+const setPriceFilterToState = (state: FilterState, action: Action): FilterState => ({
     ...state,
     priceFrom: action.priceFrom,
     priceTo: action.priceTo,
@@ -34,8 +34,8 @@ const reducer = (state: FilterState = initialState, action: Action): FilterState
     switch (action.type) {
         case UPDATE_CATEGORY_FILTER:
             return updateCategoryFilter(state, action);
-        case UPDATE_PRICE_FILTER:
-            return updatePriceFilter(state, action);
+        case SET_PRICE_FILTER_TO_STATE:
+            return setPriceFilterToState(state, action);
         case UPDATE_FAVORITES_ONLY_FILTER:
             return updateFavoritesOnlyFilter(state);
         default:

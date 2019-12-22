@@ -5,6 +5,7 @@ import {
     UPDATE_CATEGORY_FILTER,
     UPDATE_PRICE_FILTER,
     UPDATE_FAVORITES_ONLY_FILTER,
+    SET_PRICE_FILTER_TO_STATE,
 } from '../actionTypes';
 
 export const updateCategoryFilter = (categoryType: FilterOptionStrings): Action => ({
@@ -14,6 +15,12 @@ export const updateCategoryFilter = (categoryType: FilterOptionStrings): Action 
 
 export const updatePriceFilter = (priceFrom: number, priceTo: number): Action => ({
     type: UPDATE_PRICE_FILTER,
+    priceFrom,
+    priceTo,
+});
+
+export const setPriceFilterToState = (priceFrom: number, priceTo: number): Action => ({
+    type: SET_PRICE_FILTER_TO_STATE,
     priceFrom,
     priceTo,
 });

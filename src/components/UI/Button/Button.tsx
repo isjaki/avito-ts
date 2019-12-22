@@ -1,13 +1,13 @@
 import React from 'react';
-
 import classnames from 'classnames';
 
 import styles from './Button.scss';
+import { Action } from 'typings/global';
 
 type Props = {
     buttonType?: string,
     isActive?: boolean,
-    onClick: () => void,
+    onClick: () => void | Action,
     children?: string | JSX.Element,
     tooltip?: string
 }
