@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Filters from '../../containers/Filters/Filters';
+import Filters from 'containers/Filters';
 
 import styles from './FiltersWidget.scss';
 
