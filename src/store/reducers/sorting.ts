@@ -1,7 +1,7 @@
-import { Action } from '../../typings/global';
-import { SortingState, SortingOptions } from '../../typings/sorting';
+import { Action } from 'typings/global';
+import { SortingState, SortingOptions } from 'typings/sorting';
 
-import { UPDATE_SORTING_OPTION } from '../actionTypes';
+import { UPDATE_SORTING_OPTION } from 'store/actionTypes';
 
 const initialState: SortingState = {
     sortingOption: SortingOptions.Default,

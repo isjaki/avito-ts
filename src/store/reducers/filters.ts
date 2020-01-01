@@ -1,11 +1,11 @@
-import { Action } from '../../typings/global';
-import { FilterState, FilterOptions } from '../../typings/filters';
+import { Action } from 'typings/global';
+import { FilterState, FilterOptions } from 'typings/filters';
 
 import { 
     UPDATE_CATEGORY_FILTER,
     SET_PRICE_FILTER_TO_STATE,
     UPDATE_FAVORITES_ONLY_FILTER,
-} from '../actionTypes';
+} from 'store/actionTypes';
 
 const initialState: FilterState = {
     category: FilterOptions.All,

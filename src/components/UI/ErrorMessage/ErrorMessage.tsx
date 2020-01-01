@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './ErrorMessage.scss';
+import styles from 'components/UI/ErrorMessage/ErrorMessage.scss';
 
 const ErrorMessage = (): JSX.Element => (
     <div className={styles.errorMessage}>
