@@ -1,6 +1,6 @@
-import { FilterState } from '../typings/filters';
-import { ProductState } from '../typings/products';
-import { SortingState } from '../typings/sorting';
+import { FilterState } from 'typings/filters';
+import { ProductState } from 'typings/products';
+import { SortingState } from 'typings/sorting';
 
 export interface Action {
     type: string;

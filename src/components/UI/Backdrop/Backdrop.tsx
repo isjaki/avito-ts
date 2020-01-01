@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Backdrop.scss';
+import styles from 'components/UI/Backdrop/Backdrop.scss';
 
 type Props = {
     isVisible: boolean,

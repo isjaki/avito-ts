@@ -1,12 +1,12 @@
-import { ProductState } from '../../typings/products';
-import { Action } from '../../typings/global';
+import { ProductState } from 'typings/products';
+import { Action } from 'typings/global';
 
 import {
     FETCH_PRODUCT_INFO_START,
     FETCH_PRODUCT_INFO_FAIL,
     FETCH_PRODUCTS_SUCCESS,
     FETCH_SELLERS_SUCCESS,
-} from '../actionTypes';
+} from 'store/actionTypes';
 
 const initialState: ProductState = {
     products: [],

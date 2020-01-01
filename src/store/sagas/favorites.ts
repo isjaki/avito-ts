@@ -1,8 +1,8 @@
 import { put } from 'redux-saga/effects';
 
-import { Action } from '../../typings/global';
+import { Action } from 'typings/global';
 
-import { setFavoritesToState } from '../actions/favorites';
+import { setFavoritesToState } from 'store/actions/favorites';
 
 export function* addProductToFavoritesSaga(action: Action) {
     let favoriteProductIds = yield localStorage.getItem('favoriteProductIds');

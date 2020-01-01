@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-import styles from './PriceFilter.scss';
-import { Action } from '../../../typings/global';
+import styles from 'components/UI/PriceFilter/PriceFilter.scss';
+import { Action } from 'typings/global';
 
 type Props = {
     onPriceChange: (priceFrom: number, priceTo: number) => Action;

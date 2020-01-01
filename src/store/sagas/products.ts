@@ -1,14 +1,14 @@
 import { put } from 'redux-saga/effects';
 import { normalize, schema } from 'normalizr';
 
-import { Seller } from '../../typings/sellers';
+import { Seller } from 'typings/sellers';
 
 import {
     fetchProductInfoStart,
     fetchSellersSuccess,
     fetchProductsSuccess,
     fetchProductInfoFail,
-} from '../actions/products';
+} from 'store/actions/products';
 
 export async function* fetchProductInfoSaga() {
     const proxyURL = 'https://cors-anywhere.herokuapp.com/';

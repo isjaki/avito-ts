@@ -1,12 +1,12 @@
-import { Action } from '../../typings/global';
-import { FavoriteProductIds } from '../../typings/favorites';
+import { Action } from 'typings/global';
+import { FavoriteProductIds } from 'typings/favorites';
 
 import {
     SET_FAVORITES_TO_STATE,
     ADD_PRODUCT_TO_FAVORITES,
     REMOVE_PRODUCT_FROM_FAVORITES,
     INITIALIZE_FAVORITES,
-} from '../actionTypes';
+} from 'store/actionTypes';
 
 export const setFavoritesToState = (favoriteProductIds: FavoriteProductIds): Action => ({
     type: SET_FAVORITES_TO_STATE,
