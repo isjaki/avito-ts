@@ -14,3 +14,5 @@ declare module '*.sass' {
 }
 
 declare module 'normalizr';
+
+declare module 'react-lazy-load';
