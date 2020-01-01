@@ -9,9 +9,9 @@ type Props = {
 }
 
 const ProductPrice = ({ price }: Props): JSX.Element => (
-    <div className={styles.price}>
+    <p className={styles.price}>
         {formatPrice(price.toString())} &#8381;
-    </div>
+    </p>
 );
 
 export default ProductPrice;
