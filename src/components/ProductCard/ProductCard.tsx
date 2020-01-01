@@ -19,7 +19,7 @@ type Props = {
     onAddToFavoritesButtonClick: () => Action;
 };
 
-const Product = ({
+const ProductCard = ({
     title,
     price,
     pictures,
@@ -43,4 +43,4 @@ const Product = ({
     </div>
 );
 
-export default Product;
+export default ProductCard;
