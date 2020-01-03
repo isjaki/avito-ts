@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { Product } from 'typings/products';
 import { Sellers } from 'typings/sellers';
@@ -21,25 +21,27 @@ const ProductList = ({
     favoriteProductIds,
     addProductToFavorites,
     removeProductFromFavorites,
-}: Props): JSX.Element[] => (
-    products.map(product => {
-        const isProductFavorite = favoriteProductIds[product.id] === true;
-        const onAddToFavoritesButtonClick = isProductFavorite
-            ? removeProductFromFavorites
-            : addProductToFavorites;
-        
-        return (
-            <ProductCard
-                key={product.id}
-                title={product.title}
-                price={product.price}
-                pictures={product.pictures}
-                isProductFavorite={isProductFavorite}
-                sellerInfo={sellers[product.relationships.seller]}
-                onAddToFavoritesButtonClick={() => onAddToFavoritesButtonClick(product.id)}
-            />
-        );
-    })
+}: Props): JSX.Element => (
+    <Fragment>
+        {products.map(product => {
+            const isProductFavorite = favoriteProductIds[product.id] === true;
+            const onAddToFavoritesButtonClick = isProductFavorite
+                ? removeProductFromFavorites
+                : addProductToFavorites;
+            
+            return (
+                <ProductCard
+                    key={product.id}
+                    title={product.title}
+                    price={product.price}
+                    pictures={product.pictures}
+                    isProductFavorite={isProductFavorite}
+                    sellerInfo={sellers[product.relationships.seller]}
+                    onAddToFavoritesButtonClick={() => onAddToFavoritesButtonClick(product.id)}
+                />
+            );
+        })}
+    </Fragment>
 );
 
 export default ProductList;
