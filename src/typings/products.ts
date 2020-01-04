@@ -1,4 +1,4 @@
-import { Sellers } from 'typings/sellers';
+import { Sellers } from './sellers';
 
 export interface Product {
     readonly id: string;

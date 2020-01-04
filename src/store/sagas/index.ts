@@ -1,13 +1,13 @@
 import { all, takeEvery, takeLatest } from 'redux-saga/effects';
 
-import { fetchProductInfoSaga } from 'store/sagas/products';
-import { updatePriceFilterSaga } from 'store/sagas/filters';
+import { fetchProductInfoSaga } from './products';
+import { updatePriceFilterSaga } from './filters';
 
 import {
     addProductToFavoritesSaga,
     removeProductFromFavoritesSaga,
     initializeFavoritesSaga,
-} from 'store/sagas/favorites';
+} from './favorites';
 
 import { 
     FETCH_PRODUCT_INFO,
@@ -15,7 +15,7 @@ import {
     REMOVE_PRODUCT_FROM_FAVORITES,
     INITIALIZE_FAVORITES,   
     UPDATE_PRICE_FILTER,    
-} from 'store/actionTypes';
+} from '../actionTypes';
 
 function* watchProductInfo() {
     yield takeEvery(FETCH_PRODUCT_INFO, fetchProductInfoSaga);

@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 
-import { Product } from 'typings/products';
-import { Sellers } from 'typings/sellers';
-import { Action } from 'typings/global';
-import { FavoriteProductIds } from 'typings/favorites';
+import { Product } from '../../typings/products';
+import { Sellers } from '../../typings/sellers';
+import { Action } from '../../typings/global';
+import { FavoriteProductIds } from '../../typings/favorites';
 
-import ProductCard from 'components/ProductCard/ProductCard';
+import ProductCard from '../ProductCard/ProductCard';
 
 type Props = {
     products: Product[];

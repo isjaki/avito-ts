@@ -2,7 +2,7 @@ import React from 'react';
 
 import classnames from 'classnames';
 
-import styles from 'components/UI/HamburgerButton/HamburgerButton.scss';
+import styles from './HamburgerButton.scss';
 
 type Props = {
     isOpened: boolean,

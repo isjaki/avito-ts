@@ -1,6 +1,6 @@
-import { Action } from 'typings/global';
-import { Product } from 'typings/products';
-import { Sellers } from 'typings/sellers';
+import { Action } from '../../typings/global';
+import { Product } from '../../typings/products';
+import { Sellers } from '../../typings/sellers';
 
 import {
     FETCH_PRODUCT_INFO,
@@ -8,7 +8,7 @@ import {
     FETCH_PRODUCT_INFO_FAIL,
     FETCH_PRODUCTS_SUCCESS,
     FETCH_SELLERS_SUCCESS,
-} from 'store/actionTypes';
+} from '../actionTypes';
 
 export const fetchProductInfo = (): Action => ({
     type: FETCH_PRODUCT_INFO,

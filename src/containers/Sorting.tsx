@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { SortingOptionStrings, SortingOptions } from 'typings/sorting';
-import { Action, Option } from 'typings/global';
+import { SortingOptionStrings, SortingOptions } from '../typings/sorting';
+import { Action, Option } from '../typings/global';
 import { Dispatch } from 'redux';
 
-import { updateSortingOption } from 'store/actions/sorting';
+import { updateSortingOption } from '../store/actions/sorting';
 
-import Selector from 'components/UI/Selector/Selector';
+import Selector from '../components/UI/Selector/Selector';
 
 type Props = {
     updateOption: (sortingOption: SortingOptionStrings) => Action;

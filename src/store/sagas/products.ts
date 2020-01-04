@@ -1,27 +1,27 @@
 import { put } from 'redux-saga/effects';
 import { normalize, schema } from 'normalizr';
 
-import { Seller } from 'typings/sellers';
+import { Seller } from '../../typings/sellers';
 
 import {
     fetchProductInfoStart,
     fetchSellersSuccess,
     fetchProductsSuccess,
     fetchProductInfoFail,
-} from 'store/actions/products';
+} from '../actions/products';
 
-export async function* fetchProductInfoSaga() {
+export function* fetchProductInfoSaga() {
     const proxyURL = 'https://cors-anywhere.herokuapp.com/';
     yield put(fetchProductInfoStart());
     
     let sellers = null;
     let products = null;
     try {
-        const sellersData = await fetch(`${proxyURL}http://avito.dump.academy/sellers`);
-        sellers = await sellersData.json();
+        const sellersData = yield fetch(`${proxyURL}http://avito.dump.academy/sellers`);
+        sellers = yield sellersData.json();
 
-        const productsData = await fetch(`${proxyURL}http://avito.dump.academy/products`);
-        products = await productsData.json();
+        const productsData = yield fetch(`${proxyURL}http://avito.dump.academy/products`);
+        products = yield productsData.json();
     } catch {
         yield put(fetchProductInfoFail());
         return;
@@ -34,8 +34,8 @@ export async function* fetchProductInfoSaga() {
         }),
     });
     const sellerListSchema = new schema.Array(sellerSchema);
-    const normalizedSellers = normalize(sellers, sellerListSchema);
+    const normalizedSellers = normalize(sellers.data, sellerListSchema);
 
     yield put(fetchSellersSuccess(normalizedSellers.entities.sellers));
-    yield put(fetchProductsSuccess(products));
+    yield put(fetchProductsSuccess(products.data));
 }

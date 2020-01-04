@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Products from 'containers/Products';
+import Products from '../../containers/Products';
 
-import styles from 'components/ProductWrapper/ProductWrapper.scss';
+import styles from './ProductWrapper.scss';
 
 const ProductWrapper = (): JSX.Element => (
     <main className={styles.productWrapper}>

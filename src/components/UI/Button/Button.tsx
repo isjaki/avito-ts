@@ -1,8 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 
-import styles from 'components/UI/Button/Button.scss';
-import { Action } from 'typings/global';
+import { Action } from '../../../typings/global';
+
+import styles from './Button.scss';
 
 type Props = {
     buttonType?: string,

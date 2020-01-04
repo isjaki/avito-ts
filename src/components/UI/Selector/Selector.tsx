@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Action, Option } from 'typings/global';
 
-import styles from 'components/UI/Selector/Selector.scss';
+import styles from './Selector.scss';
 
 type Props = {
     options: readonly Option<string>[];

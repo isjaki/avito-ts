@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Action } from 'typings/global';
-import { Seller } from 'typings/sellers';
+import { Action } from '../../typings/global';
+import { Seller } from '../../typings/sellers';
 
-import ProductSellerInfo from 'components/ProductCard/ProductSellerInfo/ProductSellerInfo';
-import ProductPicture from 'components/ProductCard/ProductPicture/ProductPicture';
-import ProductPrice from 'components/ProductCard/ProductPrice/ProductPrice';
-import Button from 'components/UI/Button/Button';
+import ProductSellerInfo from './ProductSellerInfo/ProductSellerInfo';
+import ProductPicture from './ProductPicture/ProductPicture';
+import ProductPrice from './ProductPrice/ProductPrice';
+import Button from '../UI/Button/Button';
 
-import styles from 'components/Product/Product.scss';
+import styles from './ProductCard.scss';
 
 type Props = {
     title: string;

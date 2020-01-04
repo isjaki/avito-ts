@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import classnames from 'classnames';
 
-import Backdrop from 'components/UI/Backdrop/Backdrop';
-import styles from 'components/UI/SideDrawer/SideDrawer.scss';
+import Backdrop from '../UI/Backdrop/Backdrop';
+import styles from './SideDrawer.scss';
 
 type Props = {
     children: JSX.Element;
