@@ -1,0 +1,16 @@
+.ratingWidget {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.high > i {
+    color: #42f551;
+}
+
+.medium > i {
+    color: #f5f542;
+}
+
+.low > i {
+    color: #e31414;
+}
