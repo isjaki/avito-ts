@@ -16,11 +16,10 @@ export function* addProductToFavoritesSaga(action: Action) {
 }
 
 export function* removeProductFromFavoritesSaga(action: Action) {
-    let favProductsString = yield localStorage.getItem('favoriteProductIds');
-    if (favProductsString === null) return;
+    let favoriteProductIds = yield localStorage.getItem('favoriteProductIds');
+    if (favoriteProductIds === null) return;
 
-    let favoriteProductIds = yield JSON.parse(favProductsString)
-
+    favoriteProductIds = yield JSON.parse(favoriteProductIds)
     delete favoriteProductIds[action.productId];
     yield localStorage.setItem('favoriteProductIds', JSON.stringify(favoriteProductIds));
 
