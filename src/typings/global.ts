@@ -1,7 +1,7 @@
-import { FilterState } from 'typings/filters';
-import { ProductState } from 'typings/products';
-import { SortingState } from 'typings/sorting';
-import { FavoriteState } from 'typings/favorites';
+import { FilterState } from './filters';
+import { ProductState } from './products';
+import { SortingState } from './sorting';
+import { FavoriteState } from './favorites';
 
 export interface Action {
     type: string;

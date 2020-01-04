@@ -2,23 +2,23 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { Dispatch } from 'redux';
-import { RootState, Action } from 'typings/global';
-import { Product } from 'typings/products';
-import { Sellers } from 'typings/sellers';
-import { FavoriteProductIds } from 'typings/favorites';
-import { FilterOptionStrings, FilterOptions } from 'typings/filters';
-import { SortingOptionStrings, SortingOptions } from 'typings/sorting';
+import { RootState, Action } from '../typings/global';
+import { Product } from '../typings/products';
+import { Sellers } from '../typings/sellers';
+import { FavoriteProductIds } from '../typings/favorites';
+import { FilterOptionStrings, FilterOptions } from '../typings/filters';
+import { SortingOptionStrings, SortingOptions } from '../typings/sorting';
 
 import {
     initializeFavorites,
     addProductToFavorites,
     removeProductFromFavorites,
-} from 'store/actions/favorites';
-import { fetchProductInfo } from 'store/actions/products';
+} from '../store/actions/favorites';
+import { fetchProductInfo } from '../store/actions/products';
 
-import ErrorMessage from 'components/UI/ErrorMessage/ErrorMessage';
-import ProductList from 'components/ProductList/ProductList';
-import Spinner from 'components/UI/Spinner/Spinner';
+import ErrorMessage from '../components/UI/ErrorMessage/ErrorMessage';
+import ProductList from '../components/ProductList/ProductList';
+import Spinner from '../components/UI/Spinner/Spinner';
 
 type Props = {
     products: Product[];

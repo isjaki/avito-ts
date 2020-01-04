@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import FiltersWidget from 'components/FiltersWidget/FiltersWidget';
-import Sorting from 'containers/Sorting';
-import SideDrawer from 'components/SideDrawer/SideDrawer';
-import HamburgerButton from 'components/UI/Button/HamburgerButton/HamburgerButton';
+import FiltersWidget from '../FiltersWidget/FiltersWidget';
+import Sorting from '../../containers/Sorting';
+import SideDrawer from '../SideDrawer/SideDrawer';
+import HamburgerButton from '../UI/Button/HamburgerButton/HamburgerButton';
 
-import styles from 'components/Header/Header.scss';
+import styles from './Header.scss';
 
 const Header = (): JSX.Element => {
     const [sideDrawerOpened, toggleSideDrawer] = useState(false);

@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 
-import styles from 'components/UI/RatingWidget/RatingWidget.scss';
+import styles from './RatingWidget.scss';
 
 type Props = {
     rating: number;

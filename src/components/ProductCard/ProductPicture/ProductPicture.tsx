@@ -1,7 +1,7 @@
 import React from 'react';
 import LazyLoad from 'react-lazy-load';
 
-import Styles from 'components/Product/ProductPrice/ProductPrice.scss';
+import Styles from './ProductPicture.scss';
 
 type Props = {
     pictures: string[];

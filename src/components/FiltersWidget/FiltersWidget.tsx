@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Filters from 'containers/Filters';
+import Filters from '../../containers/Filters';
 
-import styles from 'components/UI/FiltersWidget/FiltersWidget.scss';
+import styles from './FiltersWidget.scss';
 
 const FiltersWidget = (): JSX.Element => (
     <div className={styles.filtersWidget}>

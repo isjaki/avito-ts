@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from 'components/UI/FormElementContainer/FormElementContainer.scss';
+import styles from './FormElementContainer.scss';
 
 type Props = {
     label?: string;

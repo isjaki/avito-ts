@@ -1,8 +1,8 @@
 import { put } from 'redux-saga/effects';
 
-import { Action } from 'typings/global';
+import { Action } from '../../typings/global';
 
-import { setFavoritesToState } from 'store/actions/favorites';
+import { setFavoritesToState } from '../actions/favorites';
 
 export function* addProductToFavoritesSaga(action: Action) {
     let favoriteProductIds = yield localStorage.getItem('favoriteProductIds');
@@ -16,8 +16,10 @@ export function* addProductToFavoritesSaga(action: Action) {
 }
 
 export function* removeProductFromFavoritesSaga(action: Action) {
-    let favoriteProductIds = yield localStorage.getItem('favoriteProductIds');
-    if (favoriteProductIds === null) return;
+    let favProductsString = yield localStorage.getItem('favoriteProductIds');
+    if (favProductsString === null) return;
+
+    let favoriteProductIds = yield JSON.parse(favProductsString)
 
     delete favoriteProductIds[action.productId];
     yield localStorage.setItem('favoriteProductIds', JSON.stringify(favoriteProductIds));

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import RatingWidget from 'components/UI/RatingWidget/RatingWidget';
+import RatingWidget from '../../UI/RatingWidget/RatingWidget';
 
-import styles from 'components/Product/ProductSellerInfo/ProductSellerInfo.scss';
+import styles from './ProductSellerInfo.scss';
 
 type Props = {
     name: string;

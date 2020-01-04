@@ -1,12 +1,12 @@
-import { Action } from 'typings/global';
-import { FilterOptionStrings } from 'typings/filters';
+import { Action } from '../../typings/global';
+import { FilterOptionStrings } from '../../typings/filters';
 
 import { 
     UPDATE_CATEGORY_FILTER,
     UPDATE_PRICE_FILTER,
     UPDATE_FAVORITES_ONLY_FILTER,
     SET_PRICE_FILTER_TO_STATE,
-} from 'store/actionTypes';
+} from '../actionTypes';
 
 export const updateCategoryFilter = (categoryType: FilterOptionStrings): Action => ({
     type: UPDATE_CATEGORY_FILTER,

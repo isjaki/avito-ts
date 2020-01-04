@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { formatPrice } from 'helpers/helpers';
+import { formatPrice } from '../../../helpers/helpers';
 
-import styles from 'components/Product/ProductPrice/ProductPrice.scss';
+import styles from './ProductPrice.scss';
 
 type Props = {
     price: number;
