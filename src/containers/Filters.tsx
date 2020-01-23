@@ -24,11 +24,11 @@ type Props = {
 };
 
 const selectorOptions: Option<FilterOptionStrings>[] = [
-    { value: FilterOptions.All, displayValue: 'Все' },
-    { value: FilterOptions.Immovable, displayValue: 'Недвижимость' },
-    { value: FilterOptions.Cameras, displayValue: 'Фотоаппараты' },
-    { value: FilterOptions.Auto, displayValue: 'Автомобили' },
-    { value: FilterOptions.Laptops, displayValue: 'Ноутбуки' },
+    { value: FilterOptions.all, displayValue: 'Все' },
+    { value: FilterOptions.immovable, displayValue: 'Недвижимость' },
+    { value: FilterOptions.cameras, displayValue: 'Фотоаппараты' },
+    { value: FilterOptions.auto, displayValue: 'Автомобили' },
+    { value: FilterOptions.laptops, displayValue: 'Ноутбуки' },
 ];
 
 const Filters = ({
@@ -41,7 +41,7 @@ const Filters = ({
         <FormElementContainer label="По категории:">
             <Selector
                 options={selectorOptions}
-                initialValue={FilterOptions.All}
+                initialValue={FilterOptions.all}
                 onSelectorChange={updateCategory}
             />
         </FormElementContainer>
