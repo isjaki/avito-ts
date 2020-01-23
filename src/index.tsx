@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import  'regenerator-runtime';
+import 'regenerator-runtime';
 
 import favorites from './store/reducers/favorites';
 import products from './store/reducers/products';
@@ -12,6 +12,7 @@ import sorting from './store/reducers/sorting';
 import { rootSaga } from './store/sagas/index';
 
 import App from './App';
+import './index.scss';
 
 const reducer = combineReducers({
     favorites,
