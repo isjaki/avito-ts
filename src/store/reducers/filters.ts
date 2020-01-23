@@ -8,7 +8,7 @@ import {
 } from '../actionTypes';
 
 const initialState: FilterState = {
-    category: FilterOptions.All,
+    category: FilterOptions.all,
     priceFrom: 0,
     priceTo: Infinity,
     isFavoritesOnly: false,

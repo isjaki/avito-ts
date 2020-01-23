@@ -1,9 +1,9 @@
 export enum FilterOptions {
-    All = 'All',
-    Immovable = 'Immovable',
-    Cameras = 'Cameras',
-    Auto = 'Auto',
-    Laptops = 'Laptops'
+    all = 'all',
+    immovable = 'immovable',
+    cameras = 'cameras',
+    auto = 'auto',
+    laptops = 'laptops',
 }
 
 export type FilterOptionStrings = keyof typeof FilterOptions;

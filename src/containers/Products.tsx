@@ -62,7 +62,7 @@ const Products = ({
         return productList.filter(product => {
             let isVisible = true;
 
-            if (category !== FilterOptions.All) {
+            if (category !== FilterOptions.all) {
                 isVisible = product.category === category;
             }
 
