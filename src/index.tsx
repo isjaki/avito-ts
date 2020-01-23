@@ -12,6 +12,7 @@ import sorting from './store/reducers/sorting';
 import { rootSaga } from './store/sagas/index';
 
 import App from './App';
+import './index.scss';
 
 const reducer = combineReducers({
     favorites,
